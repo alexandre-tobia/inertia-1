@@ -18,7 +18,7 @@
             </button>
         </td>
         <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-            <a href="#" class="text-indigo-600 hover:text-indigo-900">Editer</a>
+            <inertia-link :href="route('blog.edit', post.id)" class="text-indigo-600 hover:text-indigo-900">Editer</inertia-link>
             <a href="#" class="ml-4 text-indigo-600 hover:text-indigo-900">Supprimer</a>
         </td>
     </tr>

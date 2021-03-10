@@ -2,13 +2,13 @@
     <app-layout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Création d'article
+                Edition d'article
             </h2>
         </template>
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <post-form :errors="errors"/>
+                <post-form :post="post" :errors="errors"/>
             </div>
         </div>
     </app-layout>
@@ -20,7 +20,8 @@ import PostForm from "@/Components/Post/PostForm";
 
 export default {
     props: [
-        'errors'
+        'errors',
+        'post'
     ],
 
     components: {
