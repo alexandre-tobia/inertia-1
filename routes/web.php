@@ -33,6 +33,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function() {
 
     Route::get('/blog', [BlogController::class, "index"])->name('blog.index');
 
+    Route::get('/blog/create', [BlogController::class, "create"])->name('blog.create');
+
+    Route::post('/blog', [BlogController::class, "store"])->name('blog.store');
+
     Route::get('/blog/{id}/toggle', [BlogController::class, "toggle"])->name('blog.toggle');
 });
 
